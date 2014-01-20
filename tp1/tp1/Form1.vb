@@ -218,6 +218,9 @@
     Private Sub eraser_cancelled()
         tb_buffer.Text = 0
         result(choose_number()) = Double.Parse(Me.tb_buffer.Text)
+        If equal_activated = True Then
+            result(0) = 0
+        End If
     End Sub
 
     Private Sub eraser_reset()
