@@ -174,7 +174,7 @@
         Dim entier As Integer
         entier = Me.result(choose_number())
         If Me.result(choose_number()) Mod entier = 0 Or Me.result(choose_number()) = 0 Then
-            Me.tb_buffer.Text += "."
+            Me.tb_buffer.Text = result(choose_number()) & "."
         End If
     End Sub
 
