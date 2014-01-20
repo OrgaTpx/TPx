@@ -12,7 +12,6 @@
         End If
     End Function
 
-
     Private Sub store_the_fuckin_operand(op As Integer)
         ' La fonction qui sert à rien
         ' mais ca me fait rigoler
@@ -28,7 +27,7 @@
     End Sub
 
     Private Function test_zero(numb As Integer)
-        If result(numb) = 0 Then
+        If result(numb) = 0 And tb_buffer.Text <> "0." Then
             Return True
         Else
             Return False
@@ -159,7 +158,10 @@
         If test_erreur() = True Then
             tb_result.Text = ""
         End If
-        If Me.operand <> 0 Then
+        If Me.operand <> 0 And Me.result(1) = 0 Then
+            Me.tb_result.Text = Me.tb_result.Text.Substring(0, Me.tb_result.Text.Length - 1)
+            Me.tb_result.Text &= op
+        ElseIf Me.operand <> 0 And equal_activated = False Then
             Me.tb_result.Text &= Me.result(1) & op
             do_the_fuckin_operation()
             Me.tb_buffer.Text = Me.result(0)
@@ -171,7 +173,7 @@
     Private Sub add_coma()
         Dim entier As Integer
         entier = Me.result(choose_number())
-        If Me.result(choose_number()) Mod entier = 0 Then
+        If Me.result(choose_number()) Mod entier = 0 Or Me.result(choose_number()) = 0 Then
             Me.tb_buffer.Text += "."
         End If
     End Sub
@@ -205,9 +207,9 @@
     '==============================================================================
 
     Private Sub eraser_backspace()
-        If tb_buffer.Text.Length - 1 > 0 Then
+        If tb_buffer.Text.Length - 1 > 0 And equal_activated = False Then
             tb_buffer.Text = tb_buffer.Text.Substring(0, tb_buffer.Text.Length - 1)
-        Else
+        ElseIf equal_activated = False Then
             tb_buffer.Text = 0
         End If
         result(choose_number()) = Double.Parse(Me.tb_buffer.Text)
@@ -294,12 +296,22 @@
     '==============================================================================
 
     Private Sub b_equal_Click(sender As Object, e As EventArgs) Handles b_equal.Click
+
+        If Me.result(1) <> 0 Then
+            Me.equal = Me.result(1)
+        End If
+
+        Me.result(1) = equal
+
         do_the_fuckin_operation()
         operation_equal()
+       
+
+
         If test_erreur() = False Then
             Me.tb_result.Text = ""
         End If
-        Me.operand = 0
+
         Me.equal_activated = True
 
     End Sub

@@ -18,3 +18,13 @@ C:\Users\serber\Desktop\tp1\tp1\obj\Debug\tp1.vbproj.GenerateResource.Cache
 C:\Users\serber\Desktop\tp1\tp1\obj\Debug\tp1.exe
 C:\Users\serber\Desktop\tp1\tp1\obj\Debug\tp1.xml
 C:\Users\serber\Desktop\tp1\tp1\obj\Debug\tp1.pdb
+C:\Users\serber\Documents\GitHub\TPx\tp1\tp1\bin\Debug\tp1.exe.config
+C:\Users\serber\Documents\GitHub\TPx\tp1\tp1\obj\Debug\tp1.exe
+C:\Users\serber\Documents\GitHub\TPx\tp1\tp1\obj\Debug\tp1.xml
+C:\Users\serber\Documents\GitHub\TPx\tp1\tp1\obj\Debug\tp1.pdb
+C:\Users\serber\Documents\GitHub\TPx\tp1\tp1\bin\Debug\tp1.exe
+C:\Users\serber\Documents\GitHub\TPx\tp1\tp1\bin\Debug\tp1.pdb
+C:\Users\serber\Documents\GitHub\TPx\tp1\tp1\bin\Debug\tp1.xml
+C:\Users\serber\Documents\GitHub\TPx\tp1\tp1\obj\Debug\tp1.Form1.resources
+C:\Users\serber\Documents\GitHub\TPx\tp1\tp1\obj\Debug\tp1.Resources.resources
+C:\Users\serber\Documents\GitHub\TPx\tp1\tp1\obj\Debug\tp1.vbproj.GenerateResource.Cache

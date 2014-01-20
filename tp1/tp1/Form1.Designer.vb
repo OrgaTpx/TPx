@@ -374,6 +374,7 @@ Partial Class Form1
     Friend operand As Integer
     Friend equal_activated As Boolean
     Friend memory As Double
+    Friend equal As Double
 
     ' Interface ZONE : Pas touchéééé
     Friend WithEvents tb_result As System.Windows.Forms.TextBox
