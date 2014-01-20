@@ -133,7 +133,7 @@
 
     'ajoute des chiffres a la suite
     Private Sub add_number(numb As Integer)
-        If test_zero(choose_number()) = True Or equal_activated = True Then
+        If test_zero(choose_number()) = True Or equal_activated = True Or Me.memory <> 0 Then
             equal_activated = False
             Me.tb_buffer.Text = numb
             result(choose_number()) = Double.Parse(Me.tb_buffer.Text)
@@ -158,7 +158,7 @@
         If test_erreur() = True Then
             tb_result.Text = ""
         End If
-        If Me.operand <> 0 And Me.result(1) = 0 Then
+        If Me.operand <> 0 And Me.result(1) = 0 And Me.tb_result.Text.Length <> 0 Then
             Me.tb_result.Text = Me.tb_result.Text.Substring(0, Me.tb_result.Text.Length - 1)
             Me.tb_result.Text &= op
         ElseIf Me.operand <> 0 And equal_activated = False Then
@@ -368,6 +368,7 @@
     Private Sub b_mr_Click(sender As Object, e As EventArgs) Handles b_mr.Click
         Me.result(choose_number()) = Me.memory
         Me.tb_buffer.Text = Me.memory
+        Me.operand = 0
     End Sub
 
     Private Sub b_ms_Click(sender As Object, e As EventArgs) Handles b_ms.Click
