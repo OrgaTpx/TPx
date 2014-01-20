@@ -325,7 +325,7 @@
     End Sub
 
     '==============================================================================
-    ' gestion buttons effaceurs
+    ' gestion boutons effaceurs
     '==============================================================================
 
 
@@ -340,4 +340,31 @@
     Private Sub b_c_Click(sender As Object, e As EventArgs) Handles b_c.Click
         do_fuckin_eraser("C")
     End Sub
+
+    '==============================================================================
+    ' gestion boutons memoire
+    '==============================================================================
+
+
+    Private Sub b_mc_Click(sender As Object, e As EventArgs) Handles b_mc.Click
+        Me.memory = 0
+    End Sub
+
+    Private Sub b_mr_Click(sender As Object, e As EventArgs) Handles b_mr.Click
+        Me.result(choose_number()) = Me.memory
+        Me.tb_buffer.Text = Me.memory
+    End Sub
+
+    Private Sub b_ms_Click(sender As Object, e As EventArgs) Handles b_ms.Click
+        Me.memory = Double.Parse(Me.tb_buffer.Text)
+    End Sub
+
+    Private Sub b_mplus_Click(sender As Object, e As EventArgs) Handles b_mplus.Click
+        Me.memory += Double.Parse(Me.tb_buffer.Text)
+    End Sub
+
+    Private Sub b_mmoins_Click(sender As Object, e As EventArgs) Handles b_mmoins.Click
+        Me.memory += -Double.Parse(Me.tb_buffer.Text)
+    End Sub
+
 End Class
